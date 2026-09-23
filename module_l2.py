@@ -66,6 +66,19 @@ message = (input("Give a number: ")) # ask
 number = int(message) # convert to valid format
 print(number + 100) # PASS
 
+x, y = input("Enter two numbers (with no punctuation): ").split()
+# whakautu
+print(x, y)
+x, y = y, x # swap them
+print(x, y) # see them swapped
+
+a = b = c = 100 # makes all of these variables 100 i.e. shared reference
+print(a, b, c)
+
+# delete things from the environment
+print(a)
+del a
+print(a)
 
 
 # calc percentages too
@@ -97,6 +110,7 @@ print("You have {} points.".format(derived_points)) # #LEARN! use .format
 # o3
 print("You have " + str(derived_points) + " points") # #LEARN! use string adding but have to set numeric value as string
 
+print("You have ", str(derived_points), " points") # comma option
 
 
 # tuatoru condition statement play 
@@ -159,6 +173,22 @@ else:
   derived_points = points*2.00
 
 print(f"You have {derived_points:.0f} points") #still treats the medium score as expected
+
+
+
+number = 10
+
+if number < 0:
+    print("number is negative")
+
+if number > 0:
+    print("number is positive")
+
+number = number * -1
+number *= -1 # means number = number * -1. Ie SHORT way
+number = -number # by itself
+
+print(number)
 
 
 # =========================================================================================================
