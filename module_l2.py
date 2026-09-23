@@ -54,7 +54,8 @@ else:
 
 
 
-## #PLAY!
+## --- #PLAY!
+# ----- format and swap vales of variables
 number = (input("Give a number: ")) #LEARN! returns an error because needs to recognise whakautu as number
 print(number + 100)
 
@@ -90,7 +91,7 @@ points = 95
 
 
 
-# tuarua condition statement play
+# ----- tuarua condition statement play
 if points < 100: 
     points * 1.10
 else: 
@@ -113,7 +114,7 @@ print("You have " + str(derived_points) + " points") # #LEARN! use string adding
 print("You have ", str(derived_points), " points") # comma option
 
 
-# tuatoru condition statement play 
+# ----- tuatoru condition statement play 
 ''' if points < 90: derived_points = points*1.00 
 elif points >= 90 and < 100: derived_points = points*2.00 #INCORRECT
 else: derived_points = points*3.00 '''
@@ -145,7 +146,7 @@ print(f"You have {derived_points:.0f} points")
 
 
 
-# three conditions + nest as same as above but not optimised
+# ----- three conditions + nest as same as above but not optimised
 points = 73
 if points >= threshold_three:
     derived_points = points*3.00 
@@ -175,20 +176,144 @@ else:
 print(f"You have {derived_points:.0f} points") #still treats the medium score as expected
 
 
-
+# ----- treating numbers
 number = 10
+number = 0
+number = -5
 
 if number < 0:
-    print("number is negative")
+    print("tau tōraro")
 
 if number > 0:
-    print("number is positive")
+    print("tau tōraro kore")
 
+
+# treatment examples
 number = number * -1
 number *= -1 # means number = number * -1. Ie SHORT way
 number = -number # by itself
 
 print(number)
+
+
+print(f"The absolute value of te tau is {number}")
+
+# assess via optional branch with else statement
+
+if number < 0:
+    number *= -1
+    print("i tuku mai koe i tētahi >tau tōraro<") 
+else: # replace "if number > 0:" with else. 
+    print("i tuku mai koe i tētahi tau tōraro >kore<") # reo = non-negative
+
+
+# LEARN! sensitive to horizontal white space; affects the code, indicates blocks to python. vertical okay
+
+
+if number < 0:
+    number *= -1 # treat the negative
+    print("i tuku mai koe i tētahi >tau tōraro<") # negative
+elif number > 0: # cant do else if, has to be elif.
+    print("i tuku mai koe i tētahi tau tōraro >kore<") # reo = non-negative
+print(f"The absolute value of number is {number}")
+
+
+
+# some treatment options
+number % 2  # divide by specified number and return the remainder. 
+            # eg 6/2=0, but 5/2=1 (one is left over / can't be split)
+            # can use this to identify even numbers and odd numbers
+
+
+
+# assess whether tau taurua (even), tau taukē
+if number == 0:
+    print("zero") # tau kore?
+elif number % 2 == 0: # modular operator?? modal operator?
+    print("tētahi tau taurua!")
+elif number % 2 != 0:
+    print("tētahi tau taukē")
+else:
+    print("hmmm")
+
+    # REMINDER! if you end with zero clause, then condition becomes unreachable
+
+print(number)
+
+# another eg
+if number < 0:
+    print("he tau tōraro")
+elif number == 0:
+    print("tau kore")
+elif number % 2 == 0:
+    print("he tau taurua!")
+else: # you don't need an else statement SEE BELOW
+    print("he tau taukē") 
+
+# another eg
+if number < 0:
+    print("he tau tōraro")
+elif number == 0:
+    print("tau kore")
+elif number % 2 == 0:
+    print("he tau taurua!")
+elif number % 2 != 0: # you don't need an else statement
+    print("he tau taukē") 
+# end
+
+
+
+# --- nested conditional statements
+
+age = int(input("e hia ōu tau?"))
+
+# bad-practice eg
+if age >= 40:
+    if age <75:
+        print("you can be Pirimia")
+    else:
+        print("you can't be Pirimia...")
+else:
+    print("you can't be Pirimia...")
+
+
+
+# better practice eg: use logical operator
+age = int(input("e hia ōu tau?"))
+age = 57
+
+if age >= 18 and age < 65:
+    print("you can be Pirimia")
+else:
+    print("yeah nah")
+
+# other ways of saying the same first sentence
+# if age >= 18 and age < 65:
+# if 18 <= age < 65
+
+name = "Trump"
+age = 89
+name = "Mamdani"
+age = 51
+
+if name != "Trump" and (age >= 18 and age < 65):
+    print("you can be Pirimia")
+else:
+    print("yeah nah")
+
+
+
+# --- while statements
+while True:
+    age = int(input("e hia ōu tau? (0 stops the progamme)"))
+
+    if age == 0:
+        break
+    
+    if age >= 18 and age < 65:
+        print("you can be Pirimia")
+    else:
+        print("yeah nah")
 
 
 # =========================================================================================================
