@@ -329,18 +329,5 @@ print("Kia pai Te Wiki o te Reo Māori")
 # SHIFT + ENTER = runs line
 # CTRL + F5 = runs entire code
 
-# =================
-# exercise 2
-# =================
-
-# Fix the code
-print("Simeoni")
-print("Juhani")
-print("Eero")
-print("Lauri")
-print("Aapo")
-print("Tuomas")
-print("Timo")
-
 
 # END
