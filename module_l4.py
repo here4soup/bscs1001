@@ -138,6 +138,8 @@ def factorial(n: int):
 factorial(10.7)
 #END
 
+
+
 #PLAY
 def join(first: int, second: int) -> float:  # pylance is a style detector for auto scroll
     return float(first + second)
@@ -184,6 +186,19 @@ name = nlist
 print(nlist)
 
 
+
+name = "hēmi" 
+name = name[0].upper() + name[1:]
+print(name)
+
+
+
+name = ["hēmi","jordan","arapera"] #LEARN! does not work. can't be as-is with a list
+name = name[0].upper() + name[1:]
+print(name)
+
+
+
 result = [3,4,6,77] 
 result.append(20000) # add one
 print(result)
@@ -204,6 +219,8 @@ name.append(name)
 
 print(name)
 
+
+
 # ----- using lists
 numbers = [3,4,5,2,4]
 numbers.pop(1) # index you want to remove
@@ -211,34 +228,68 @@ print(numbers)
 numbers.remove(4) # define the item you want to remove. eg all 4
 print(numbers) #LEARN! but if you don't have any of that item in the actual list, then will return an error. handle this with a function
 
-#def safe_remove(numbers: list) #TODOLATER
+
+
+def safe_remove(x: list, item: int):
+    while item in x:
+        x.remove(item)
+
+numbers = [10,20,30,40,50]
+
+safe_remove(numbers,30)
+
+print(numbers)
+
+
+name = ["Peter","Paul","Sam"]
+
+while len(name) > 0:
+    name.pop(0)
+    print(name) # remove first itedm in list one at a time
+
+while len(name) > 0:
+    name.pop(-1)
+    print(name) # remove last itedm in list one at a time
+
+
 
 # ---- sorting
 results = [23,5.7,7.8,8]
 results.sort()
 print(results)
 
+
+
 names = ["Simeoni", "Juhani", "Eero", "Lauri", "Aapo", "Tuomas", "Timo"]
 names.sort()
 print(names)
 
+
+
 # original order might be important
-results =["Hēmi", "Neihana", "Arapera"]
+results =["Hēmi", "Neihana", "Arapera","annabelle"] # lowercase characters come after uppercase characters
 results_sorted = sorted (results)
 print(results)
 print(results_sorted)
 
+
+
 # ----- other sorting as WITH FOR loopS
 # clumsy sort
 names =["Hēmi", "Neihana", "Arapera", "Leaf"]
+
 index = 0
 while index < len (names):
     print(names[index])
     index += 1
 
+
+
 # better options # visit each item one at a time. exactly once starting from first
 for name in names:
     print(name)
+
+
 
 # count the occurence in string
 sentence = " a small dog was barking all night"
@@ -250,6 +301,8 @@ for letter in sentence :
         number_of_vowels += 1
 
 print(number_of_vowels)
+
+
 
 # ----- range function
 
@@ -339,5 +392,10 @@ days_in_year = 365
 time = ((minutes_in_hour * hour_in_day) * days_in_year)
 
 print(time)
+
+#exercise 5
+print('print("Hello there!")')
+
+
 
 # END

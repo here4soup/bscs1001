@@ -329,5 +329,49 @@ print("Kia pai Te Wiki o te Reo Māori")
 # SHIFT + ENTER = runs line
 # CTRL + F5 = runs entire code
 
+#exercise Name twice
+
+name = input("Ko wai tō ingoa? ") # task the system to prompt input
+#name = "Hēmi"
+print(name + "\n" + name)
+
+#exercise Name and exclamation marks
+name = input("Ko wai tō ingoa? ") # task the system to prompt input
+
+print("" ,name ,name ,""  ,sep="!")
+
+
+#Programming exercise: Name and address
+
+ingoa = input("Ko wai tō ingoa? ")
+ingoa_whānau = input("Ko wai tō ingoa whānau? ")
+noho_ora = input("Kei hea i noho ora?")
+tāone = input("Tāone me te tohu karere?")
+
+ingoa = "keesh"
+ingoa_whānau = "watene"
+noho_ora = "terrace"
+tāone = "pōneke 6011"
+
+print(ingoa + " " + ingoa_whānau + "\n" + noho_ora + "\n" + tāone)
+
+
+#Programming exercise: Fix the code: Utterances
+
+part1 = input("The 1st part: ")
+part2 = input("The 2st part: ")
+part3 = input("The 3st part: ")
+print(part1, part2, part3 + "!", sep="-")
+
+
+
+#Programming exercise:Story
+ingoa = input("e koe, whakautu i tētahi ingoa") 
+tau = input("...me te tau")
+
+ingoa = "matiu"
+tau = 1572
+
+print(ingoa + " is a valiant knight, born in the year " + tau + ". One morning " + ingoa + "\n" + " woke up to an awful racket: a dragon was approaching the village. Only " + ingoa + " could save the village's residents.")
 
 # END
